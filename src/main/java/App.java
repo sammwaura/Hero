@@ -8,6 +8,18 @@ import static spark.Spark.*;
 
 public class App {
   public static void main(String[] args) {
+      
+      ProcessBuilder thisProcess = new ProcessBuilder();
+      Integer port;
+      if (thisProcess.environment().get("PORT")!=null){
+          port = Integer.parseInt(thisProcess.environment().get("PORT"));
+        } else {
+            port = 4567;
+        }
+   
+       setPort(port);
+      }
+
       staticFileLocation("/public");
       String layout = "templates/layout.vtl";
 
