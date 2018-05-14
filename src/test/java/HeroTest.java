@@ -5,14 +5,32 @@ import static org.junit.Assert.*;
 public class HeroTest {
 
     @Test 
-    public void Hero_CorrectlyInsatiates_True(){
-        Hero newHero = new Hero("Batman");
-        assertEquals(true,newHero insatnceof Hero);
+    public void hero_instantiatesAppropriately_true() {
+        Hero testHero = new Hero("Batman", 38,"immortal", "beast");
+        assertEquals(true, testHero instanceof Hero);
     }
 
     @Test
-    public void Hero_instatiatesWithName_String(){
-        Hero newHero = new Hero("Batman");
-        assertEquals("Batman", newHero.getName());
+    public void getName_instantiatesTheNameProperty_true(){
+        Hero testHero = new Hero("Batman",38,"immortal", "beast");
+        assertEquals("Batman", testHero.getName());
+    }
+
+    @Test
+    public void getAge_instantiatesTheAgeProperty_String() {
+        Hero testHero = new Hero("Batman", 38, "immortal", "beast");
+        assertEquals(38, testHero.getAge());
+    }
+
+    @Test
+    public void getAge_instantiatesTheStrengthArray_String() {
+        Hero testHero = new Hero("Batman", 38, "immortal", "beast");
+        assertEquals("immortal", testHero.getSuperPower());
+    }
+
+    @Test
+    public void getAge_instantiatesTheWeaknessArray_String() {
+        Hero testHero = new Hero("Batman", 38, "immortal", "beast");
+        assertEquals("beast", testHero.getWeakness());
     }
 }
