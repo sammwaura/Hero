@@ -1,10 +1,10 @@
 body{
-    font-family:'';
-    background-image: url("/images/.jpg");
+    font-family:'Faustina';
+    background-image: url("/images/unsplash.jpg");
     background-size: cover;
     font-size: 20px;
-    color: black;
+    color: whitesmoke;
 }
 a{
-    color:black;
+    color:white;
 }

@@ -8,6 +8,8 @@ import static spark.Spark.*;
 
 public class App {
   public static void main(String[] args) {
+      staticFileLocation("/public");
+      String layout = "templates/layout.vtl";
 
       ProcessBuilder thisProcess = new ProcessBuilder();
       Integer port;
@@ -18,10 +20,7 @@ public class App {
         }
    
        setPort(port);
-      }
-
-      staticFileLocation("/public");
-      String layout = "templates/layout.vtl";
+      
 
         //hero class get and post methods   
       get ("/", (request,response)->{
