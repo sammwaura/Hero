@@ -1,0 +1,10 @@
+
+<h1>All Squads</h1>
+<ul>
+  #foreach ($squad in $squads)
+    <li><a href="/squads/$squad.getId()">$squad.getName()</a></li>
+  #end
+</ul>
+<div class="well">
+    <a href="/squads/new">Add Squad Category</a>
+</div>

@@ -2,13 +2,13 @@ import java.util.ArrayList;
 import java.util.List;
 public class Hero{
 
-// private variables that outline the heros properties
+// private variables that outline the hero properties
 
 private String heroName;
 private int heroAge;
 private String heroSuperPower;
 private String heroWeakness;
-private static List<Hero> heroList = newArray<Hero>();
+private static List<Hero> heroList = new ArrayList<Hero>();
 private int mId;
 
 public  Hero(String name,int age,String power, String weakness) {
@@ -17,7 +17,7 @@ public  Hero(String name,int age,String power, String weakness) {
     heroSuperPower=power;
     heroWeakness=weakness;
     heroList.add(this);
-    mId=heroList.size();
+    mId = heroList.size();
 
     public String getName(){
         return heroName;
@@ -47,4 +47,5 @@ public  Hero(String name,int age,String power, String weakness) {
       public static Hero find(int id) {
         return heroList.get(id - 1);
       }
- }
+    }
+ 

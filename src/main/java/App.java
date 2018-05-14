@@ -64,7 +64,7 @@ public class App {
           Squad squad = Squad.find(Integer.parseInt(request.queryParams("squadId"))); 
           String name = request.queryParams("SuperHero-Name");
           int age = Integer.parseInt(request.queryParams("hero-age"));
-          Strikng power = request.queryParams("special-power");
+          String power = request.queryParams("special-power");
          String weakness = request.queryParams("weakness");
           Hero myHero = new Hero(name,age,power,weakness);
      

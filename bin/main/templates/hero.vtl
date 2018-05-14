@@ -1,0 +1,17 @@
+#if ($hero)
+    #foreach ($hero in $hero)
+    <div class="well">
+      <p>$hero.getName()</p>
+      <p>$hero.getAge()</p>
+      <p>$hero.getSuperPower()</p>
+      <p>$hero.getWeakness()</p>
+      <li><a href="/hero/$hero.getId()">$hero.getName()</a></li>
+    </div>
+    #end
+    
+#else
+    <p>No hero!</p>
+#end
+<div class="well">
+    <a href="/hero/new">Add New Hero</a>
+</div>
