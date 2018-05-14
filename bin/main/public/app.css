@@ -1,0 +1,10 @@
+body{
+    font-family:'';
+    background-image: url("/images/.jpg");
+    background-size: cover;
+    font-size: 20px;
+    color: black;
+}
+a{
+    color:black;
+}
