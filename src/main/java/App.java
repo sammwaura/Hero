@@ -33,14 +33,14 @@ public class App {
 
     get("/squads/new", (request, response)-> {
         Map<String, Object> model = new HashMap<String, Object>();
-        model.put("template", "template/squad-form.vtl");
+        model.put("template", "templates/squad-form.vtl");
         return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
         get ("/squads", (request, response)-> {
             Map<String, Object> model = new HashMap<String, Object>();
             model.put("squads", Squad.all());
-            model.put("template", "template/squad.vtl");
+            model.put("template", "templates/squad.vtl");
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
@@ -52,7 +52,7 @@ public class App {
         return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
-        get("squads/:id/heroes/new", (request, response) -> {
+        get("squads/:id/hero/new", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             Squad squad = Squad.find(Integer.parseInt(request.params(":id")));
             model.put("squad", squad);
@@ -70,7 +70,7 @@ public class App {
             return new ModelAndView(model, layout);
           }, new VelocityTemplateEngine());
 
-      post("/heroes", (request,response)->{
+      post("/hero", (request,response)->{
           Map<String, Object> model = new HashMap<String,Object>();
           Squad squad = Squad.find(Integer.parseInt(request.queryParams("squadId"))); 
           String name = request.queryParams("SuperHero-Name");

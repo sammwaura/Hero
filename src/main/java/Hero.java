@@ -4,47 +4,48 @@ public class Hero{
 
 // private variables that outline the hero properties
 
-private String heroName;
-private int heroAge;
-private String heroSuperPower;
-private String heroWeakness;
+private String mName;
+private int mAge;
+private String mSuperPower;
+private String mWeakness;
 private static List<Hero> heroList = new ArrayList<Hero>();
 private int mId;
 
 public  Hero(String name,int age,String power, String weakness) {
-    heroName=name;
-    heroAge=age;
-    heroSuperPower=power;
-    heroWeakness=weakness;
+    mName=name;
+    mAge=age;
+    mSuperPower=power;
+    mWeakness=weakness;
     heroList.add(this);
     mId = heroList.size();
+}
 
     public String getName(){
-        return heroName;
+        return mName;
     }
 
     public int getAge() {
-        return heroAge;
+        return mAge;
     }
 
     public String getSuperPower() {
-        return heroSuperPower;
+        return mSuperPower;
     }
 
     public String getWeakness() {
-        return heroWeakness;
+        return mWeakness;
     }
 
-    public static List<Hero> all(){
+    public List<Hero> all(){
         return heroList;
     }
-    public static void clear() {
+    public void clear() {
         heroList.clear();
       }
     public int getId() {
         return mId;
       }
-      public static Hero find(int id) {
+      public Hero find(int id) {
         return heroList.get(id - 1);
       }
     }

@@ -1,8 +1,8 @@
 
-<h1>$squad.getName()</h1>
+<h1>Squad Names</h1>
 
 <ul>
-  #foreach($hero in $squad.getHero())
+  #foreach($hero in $squad.getHeros())
       <p>$hero.getName()</p>
       <p>$hero.getAge()</p>
       <p>$hero.getSuperPower()</p>
@@ -10,7 +10,7 @@
   #end
 </ul>
 <div class="well">
-    <a href="/squads/$squad.getId()/hero/new">Add a new Hero</a>
+     <button type="button" class="btn btn-info"><a href="/squads/:id">Add a new Hero</a></button>
 
-    <a href="/squads">All Squads</a>
+    <button type="button" class="btn btn-info"><a href="/squads">All Squads</a></button>
 </div>

@@ -1,10 +1,9 @@
-body{
-    font-family:'Faustina';
-    background-image: url("/images/unsplash.jpg");
-    background-size: cover;
+.title{
+    font-family: 'Courgette', cursive;
+    background-color:saddlebrown; 
     font-size: 20px;
-    color: whitesmoke;
+    color: rgb(178, 233, 205);
 }
 a{
-    color:white;
+    color:black;
 }
